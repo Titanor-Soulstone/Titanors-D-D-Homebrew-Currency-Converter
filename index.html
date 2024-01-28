@@ -306,7 +306,33 @@
     function acceptCookies() {
       document.getElementById('cookieConsent').style.display = 'none';
       setCookie('cookieConsent', 'accepted', 365);
+
+      // Check and apply dark mode preference
+      const darkModeToggle = document.getElementById('darkModeToggle');
+      const darkModeCookie = getCookie('darkMode');
+
+      if (darkModeCookie === 'enabled') {
+        darkModeToggle.checked = true;
+        document.body.classList.add('dark-mode');
+      } else {
+        darkModeToggle.checked = false;
+        document.body.classList.remove('dark-mode');
+      }
     }
+
+    // Check and apply dark mode preference on initial load
+    window.addEventListener('load', function() {
+      const darkModeToggle = document.getElementById('darkModeToggle');
+      const darkModeCookie = getCookie('darkMode');
+
+      if (darkModeCookie === 'enabled') {
+        darkModeToggle.checked = true;
+        document.body.classList.add('dark-mode');
+      } else {
+        darkModeToggle.checked = false;
+        document.body.classList.remove('dark-mode');
+      }
+    });
   </script>
 </body>
 </html>
