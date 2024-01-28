@@ -3,6 +3,18 @@ body {
   transition: background-color 0.5s;
 }
 
+
+h1 {
+  text-align: left;
+  margin-left: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%; /* Adjust as needed */
+  background-color: #fff; /* Background color for better readability */
+  z-index: 1000;
+}
+
 h1, h2 {
   color: #333;
 }
@@ -29,8 +41,12 @@ select, input, button {
 
 /* Styled Checkbox */
 .switch-container {
-  position: relative;
-  display: inline-block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 10px;
+  margin-right: 10px;
+  z-index: 1000;
 }
 
 .switch-label {
