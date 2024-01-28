@@ -64,11 +64,11 @@ select, input, button {
 }
 
 /* Checked State */
-#darkModeToggle:checked + .switch-label .toggle {
+.switch-label input:checked + .toggle {
   background: #4CAF50;
 }
 
-#darkModeToggle:checked + .switch-label .handle {
+.switch-label input:checked + .toggle + .handle {
   left: 33px;
 }
 
