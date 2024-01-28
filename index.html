@@ -37,7 +37,14 @@
   <br>
   <p id="result"></p>
 
-  <iframe src="table.html" width="100%" style="border: none"></iframe>
+  <iframe id="tableFrame" src="table.html" width="100%" style="border: none"></iframe>
+
+  <script>
+    var iframe = document.getElementById('tableFrame');
+    iframe.onload = function() {
+      iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 40 + 'px';
+    };
+  </script>
 
   <script src="app.js"></script>
   <script src="darkmode.js"></script>
