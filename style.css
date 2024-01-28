@@ -29,11 +29,7 @@ select, input, button {
 
 /* Styled Checkbox */
 .switch-container {
-  position: fixed;
-  top: 0;
-  right: 0;
-  margin-top: 10px;
-  margin-right: 10px;
+  position: inline;
   z-index: 1000;
 }
 
