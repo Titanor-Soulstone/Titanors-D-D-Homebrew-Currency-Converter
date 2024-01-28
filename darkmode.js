@@ -13,9 +13,6 @@ function toggleDarkMode() {
     sunMoon.innerHTML = '&#x2600;'; // Sun symbol
     setCookie('darkMode', 'disabled', 365);
   }
-
-  // Apply dark mode styles to the iframe content
-  applyDarkModeToIframe();
 }
 
 // Function to apply dark mode styles to iframe content
