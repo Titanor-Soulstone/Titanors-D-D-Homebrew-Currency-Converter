@@ -58,17 +58,17 @@ function acceptCookies() {
 
   // Check and apply dark mode preference
   const darkModeToggle = document.getElementById('darkModeToggle');
-  const sunMoon = document.getElementById('sunMoon');
+  //const sunMoon = document.getElementById('sunMoon');
   const darkModeCookie = getCookie('darkMode');
 
   if (darkModeCookie === 'enabled') {
     darkModeToggle.checked = true;
     document.body.classList.add('dark-mode');
-    sunMoon.innerHTML = '&#x1F319;'; // Moon symbol
+    //sunMoon.innerHTML = '&#x1F319;'; // Moon symbol
   } else {
     darkModeToggle.checked = false;
     document.body.classList.remove('dark-mode');
-    sunMoon.innerHTML = '&#x2600;'; // Sun symbol
+    //sunMoon.innerHTML = '&#x2600;'; // Sun symbol
   }
 
   // Apply dark mode styles to the iframe content
@@ -90,11 +90,11 @@ window.addEventListener('load', function() {
   if (darkModeCookie === 'enabled') {
     darkModeToggle.checked = true;
     document.body.classList.add('dark-mode');
-    sunMoon.innerHTML = '&#x1F319;'; // Moon symbol
+    //sunMoon.innerHTML = '&#x1F319;'; // Moon symbol
   } else {
     darkModeToggle.checked = false;
     document.body.classList.remove('dark-mode');
-    sunMoon.innerHTML = '&#x2600;'; // Sun symbol
+    //sunMoon.innerHTML = '&#x2600;'; // Sun symbol
   }
 
   applyDarkModeToIframe(); // Apply dark mode styles to the iframe on initial load
