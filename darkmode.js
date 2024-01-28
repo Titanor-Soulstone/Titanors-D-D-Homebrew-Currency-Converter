@@ -13,6 +13,12 @@ function toggleDarkMode() {
     sunMoon.innerHTML = '&#x2600;'; // Sun symbol
     setCookie('darkMode', 'disabled', 365);
   }
+
+  // Communicate with the iframe
+  const iframe = document.getElementById('currencyTable');
+  if (iframe && iframe.contentWindow) {
+    iframe.contentWindow.postMessage({ darkMode: darkModeToggle.checked }, '*');
+  }
 }
 
 // Function to set a cookie
