@@ -2,7 +2,8 @@
 
 // Function to apply dark mode styles to iframe content
 function applyDarkModeToIframe() {
-  const iframe = document.querySelector('iframe');
+  //const iframe = document.querySelector('iframe');
+  const iframe = document.getElementById('tableFrame');
   const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
 
   // Apply dark mode styles to the iframe content
