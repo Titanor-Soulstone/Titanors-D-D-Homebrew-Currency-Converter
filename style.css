@@ -3,18 +3,6 @@ body {
   transition: background-color 0.5s;
 }
 
-
-h1 {
-  text-align: left;
-  margin-left: 10px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 50%; /* Adjust as needed */
-  background-color: #fff; /* Background color for better readability */
-  z-index: 1000;
-}
-
 h1, h2 {
   color: #333;
 }
