@@ -30,7 +30,7 @@ function convertCurrency() {
     .then(data => {
       const exchangeRate = data[fromCurrency] / data[toCurrency];
       const result = amount * exchangeRate;
-      document.getElementById('result').textContent = `${amount} ${fromCurrency} is equal to ${result.toFixed(2)} ${toCurrency}`;
+      document.getElementById('result').textContent = `${amount} ${fromCurrency} is equal to ${result.toFixed(5)} ${toCurrency}`;
     })
     .catch(error => console.error('Error fetching exchange rates:', error));
 }
