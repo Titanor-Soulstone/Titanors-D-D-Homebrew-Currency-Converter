@@ -2,15 +2,15 @@
 function toggleDarkMode() {
   const body = document.body;
   const darkModeToggle = document.getElementById('darkModeToggle');
-  const sunMoon = document.getElementById('sunMoon');
+  //const sunMoon = document.getElementById('sunMoon');
 
   if (darkModeToggle.checked) {
     body.classList.add('dark-mode');
-    sunMoon.innerHTML = '&#x1F319;'; // Moon symbol
+    //sunMoon.innerHTML = '&#x1F319;'; // Moon symbol
     setCookie('darkMode', 'enabled', 365);
   } else {
     body.classList.remove('dark-mode');
-    sunMoon.innerHTML = '&#x2600;'; // Sun symbol
+    //sunMoon.innerHTML = '&#x2600;'; // Sun symbol
     setCookie('darkMode', 'disabled', 365);
   }
 }
