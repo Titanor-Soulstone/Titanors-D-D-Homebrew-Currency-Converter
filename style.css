@@ -3,132 +3,192 @@ body {
   transition: background-color 0.5s;
 }
 
-h1, h2 {
-  color: #333;
-}
-
-table {
-  margin: 20px auto;
-  border-collapse: collapse;
-  width: 80%;
-}
-
-th, td {
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 10px;
-  border: 1px solid #333;
+  background-color: #f8f8f8;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-label {
-  display: block;
-  margin: 10px 0;
+h1 {
+  color: #333;
+  text-align: left;
+  margin-left: 10px;
 }
 
-select, input, button {
-  margin: 5px 0;
-}
-
-/* Styled Checkbox */
 .switch-container {
-  position: inline;
-  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.sun-moon {
+  font-size: 1.5em;
+  margin: 0 10px;
 }
 
 .switch-label {
   position: relative;
   display: inline-block;
   width: 60px;
-  height: 30px;
+  height: 34px;
 }
 
-.switch-label .toggle {
+.switch-label input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle {
   position: absolute;
+  cursor: pointer;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
-  background: #ccc;
-  transition: background 0.3s;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: background-color 0.3s;
 }
 
-.switch-label .handle {
+.handle {
   position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 24px;
-  height: 24px;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
   border-radius: 50%;
-  background: white;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-  transition: left 0.3s;
+  transition: transform 0.3s;
 }
 
-/* Checked State */
 .switch-label input:checked + .toggle {
-  background: #4CAF50;
+  background-color: #2196F3;
 }
 
-.switch-label input:checked + .toggle + .handle {
-  left: 33px;
+.switch-label input:checked + .toggle .handle {
+  transform: translateX(26px);
+}
+
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+select, input, button {
+  margin: 10px 0;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 
 button {
-  padding: 8px 16px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 4px;
   cursor: pointer;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  border-radius: 5px;
 }
 
 button:hover {
   background-color: #45a049;
 }
 
-/* Dark Mode Styles */
-.dark-mode {
-  background-color: #333;
-  color: #fff;
+iframe {
+  margin-top: 20px;
 }
 
-.dark-mode h1, .dark-mode h2 {
-  color: #fff;
-}
-
-.dark-mode label, .dark-mode th, .dark-mode td {
-  border-color: #ddd;
-  color: #ddd;
-}
-
-.dark-mode button {
-  background-color: #555;
-}
-
-/* Cookie Consent Styles */
 .cookie-consent {
-  display: none;
-  background-color: #f1f1f1;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f2f2f2;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
 }
 
 .cookie-consent button {
   background-color: #4CAF50;
   color: white;
   border: none;
-  padding: 5px 10px;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 12px;
-  margin: 0 5px;
+  font-size: 16px;
+  margin: 4px 2px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .cookie-consent button:hover {
   background-color: #45a049;
+}
+
+/* Dark mode styles */
+.dark-mode select, .dark-mode input, .dark-mode button {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.dark-mode button:hover {
+  background-color: #555;
+}
+
+h2 {
+  color: #555;
+  margin-top: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+/* Dark mode styles for h2 and label */
+.dark-mode h2, .dark-mode label {
+  color: #ccc;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Dark mode styles for table */
+.dark-mode table {
+  border: 1px solid #555;
+}
+
+.dark-mode th, .dark-mode td {
+  border: 1px solid #333;
+  background-color: #444;
+  color: #ccc;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
 }
