@@ -104,13 +104,9 @@ button:hover {
   color: #fff;
 }
 
-.dark-mode label, .dark-mode th, .dark-mode td {
+.dark-mode label, .dark-mode th, .dark-mode td, .dark-mode button {
   border-color: #ddd;
   color: #ddd;
-}
-
-.dark-mode button {
-  background-color: #555;
 }
 
 /* Cookie Consent Styles */
