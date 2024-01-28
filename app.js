@@ -28,7 +28,7 @@ function convertCurrency() {
   fetch('currencies.json')
     .then(response => response.json())
     .then(data => {
-      const exchangeRate = data[toCurrency] / data[fromCurrency];
+      const exchangeRate = data[fromCurrency] / data[toCurrency];
       const result = amount * exchangeRate;
       document.getElementById('result').textContent = `${amount} ${fromCurrency} is equal to ${result.toFixed(2)} ${toCurrency}`;
     })
