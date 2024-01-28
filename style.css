@@ -46,6 +46,10 @@ button:hover {
   color: #fff;
 }
 
+.dark-mode h1, .dark-mode h2 {
+  color: #fff;
+}
+
 .dark-mode label, .dark-mode th, .dark-mode td {
   border-color: #ddd;
   color: #ddd;
