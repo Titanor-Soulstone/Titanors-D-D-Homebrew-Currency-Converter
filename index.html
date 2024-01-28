@@ -8,6 +8,10 @@
 </head>
 <body>
   <h1>Titanors D&D Homebrew Currency Converter</h1>
+
+  <label for="darkModeToggle">Dark Mode:</label>
+  <input type="checkbox" id="darkModeToggle" onclick="toggleDarkMode()">
+  
   <label for="fromCurrency">From Currency:</label>
   <select id="fromCurrency"></select>
   <br>
@@ -251,5 +255,18 @@
   </table>
 
   <script src="app.js"></script>
+  <script>
+    // Dark Mode Toggle Function
+    function toggleDarkMode() {
+      const body = document.body;
+      const darkModeToggle = document.getElementById('darkModeToggle');
+
+      if (darkModeToggle.checked) {
+        body.classList.add('dark-mode');
+      } else {
+        body.classList.remove('dark-mode');
+      }
+    }
+  </script>
 </body>
 </html>
