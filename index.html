@@ -14,12 +14,12 @@
   <h1>Titanors D&D Homebrew Currency Converter</h1>
 
   <div class="switch-container">
-    <label>Darkmode:<!--<div class="sun-moon" id="sunMoon">&#x2600;</div>-->
-      <label><div class="sun-moon" id="sunMoon">&#x2600;</div></label>
+    <label>Darkmode:
       <label class="switch-label" for="darkModeToggle">
         <input type="checkbox" id="darkModeToggle" onclick="toggleDarkMode()">
         <div class="toggle"></div>
         <div class="handle"></div>
+        <!--<div class="sun-moon" id="sunMoon">&#x2600;</div>-->
       </label>
     </label>
   </div>
@@ -37,7 +37,14 @@
   <br>
   <p id="result"></p>
 
-  <iframe src="table.html" width="80%" height="400px" style="border: 1px solid #333;"></iframe>
+  <iframe id="tableFrame" src="table.html" width="100%" style="border: none"></iframe>
+
+  <script>
+    var iframe = document.getElementById('tableFrame');
+    iframe.onload = function() {
+      iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+    };
+  </script>
 
   <script src="app.js"></script>
   <script src="darkmode.js"></script>
