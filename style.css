@@ -1,0 +1,40 @@
+body {
+  text-align: center;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #333;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+select, input, button {
+  margin: 5px 0;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
