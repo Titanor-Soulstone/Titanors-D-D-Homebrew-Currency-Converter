@@ -1,3 +1,20 @@
+// Function to check and apply dark mode preference
+function checkAndApplyDarkMode() {
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  const sunMoon = document.getElementById('sunMoon');
+  const darkModeCookie = getCookie('darkMode');
+
+  if (darkModeCookie === 'enabled') {
+    darkModeToggle.checked = true;
+    document.body.classList.add('dark-mode');
+    sunMoon.innerHTML = '&#x1F319;'; // Moon symbol
+  } else {
+    darkModeToggle.checked = false;
+    document.body.classList.remove('dark-mode');
+    sunMoon.innerHTML = '&#x2600;'; // Sun symbol
+  }
+}
+
 // Dark Mode Toggle Function
 function toggleDarkMode() {
   const body = document.body;
@@ -103,3 +120,13 @@ window.addEventListener('load', function() {
 
   applyDarkModeToIframe(); // Apply dark mode styles to the iframe on initial load
 });
+
+// Check and apply dark mode preference on initial load
+window.addEventListener('load', function () {
+  checkAndApplyDarkMode();
+});
+
+// Check and apply dark mode preference in case of cookie consent
+if (getCookie('cookieConsent') === 'accepted') {
+  checkAndApplyDarkMode();
+}
